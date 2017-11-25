@@ -1,4 +1,5 @@
 import { combineReducers, Reducer } from 'redux';
+import { firebaseReducer } from 'react-redux-firebase';
 import todos from './todos';
 
 export interface RootState {
@@ -6,5 +7,6 @@ export interface RootState {
 }
 
 export default combineReducers<RootState>({
-  todos
+  todos,
+  firebase: firebaseReducer
 });
